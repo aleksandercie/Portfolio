@@ -2,7 +2,7 @@
 My personal portfolio.
 
 ## Demo
-* [Demo version](https://aleksandercie.github.io/portfolio/)
+* [Demo version](https://aleksandercie.github.io/main-portfolio/)
 ## Technologies
 
 Project is created with:
