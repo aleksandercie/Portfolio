@@ -10,25 +10,3 @@ document.addEventListener('scroll', function() {
   progress.style.setProperty('--scroll', scroll + '%');
 });
 
-var i = 0;
-var j = 0;
-var name = "Aleksander Gąsior"; 
-var profession ="Front-end Developer"
-
-function typeProfession() {
-  if (j < profession.length) {
-    document.getElementById("profession").innerHTML += profession.charAt(j);
-    j++;
-    setTimeout(typeProfession, 100);
-  }
-}
-typeProfession();
-
-function typeName() {
-  if (i < name.length) {
-    document.getElementById("name").innerHTML += name.charAt(i);
-    i++;
-    setTimeout(typeName, 100);
-  }
-}
-typeName();
