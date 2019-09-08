@@ -222,9 +222,11 @@ header {
   font-size:  4.5em;
 }
 .disable {
+   pointer-events: none;
    color: #fff;
    background-color: #4c4c4c; 
 }
+
 .disable i {
     margin-top: 0;
 }
