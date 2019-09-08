@@ -24,10 +24,9 @@
     margin: 60px 0;
     font-weight: 700;
     visibility: hidden;
-    /* background: url(../img/image.jpg) -200px;
+    background: url(../img/image.jpg) -200px;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    color: #000;
+    -webkit-text-fill-color: transparent; 
  }
  
  h2,
