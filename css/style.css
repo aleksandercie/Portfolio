@@ -306,6 +306,9 @@ footer p {
  
 }
 @media (max-width:850px){
+   header {
+      height: 65vh;
+   }
 
     .person {
      width: 750px;
