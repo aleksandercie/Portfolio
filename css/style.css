@@ -23,10 +23,11 @@
     text-align: center;
     margin: 60px 0;
     font-weight: 700;
-    background: url(../img/image.jpg) -200px;
+    visibility: hidden;
+    /* background: url(../img/image.jpg) -200px;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
+    -webkit-text-fill-color: transparent; */
+    color: #000;
  }
  
  h2,
@@ -34,6 +35,11 @@
     margin: 0;
     font-size: 2em;
     font-weight: 500;
+
+ }
+ .name, 
+ .profession{
+   visibility: hidden;
  }
  
  h3 {
@@ -78,7 +84,7 @@
  .main-nav {
     position: sticky;
     top: 0;
-    z-index: 400px;
+    z-index: 4;
     background-color: #fff;
  }
  .main-nav label,
@@ -107,7 +113,7 @@
    width: 99.4%;
    height: 2px;
    top: 38px;
-   z-index: 1;
+   z-index: 4;
  }
  /* Header */
  header {
@@ -126,33 +132,29 @@
  .about {
     background-color: #e5e5e5;
  }
+  
+ .person {
+   display: flex;
+   justify-content: center;
+   margin: 40px auto 0 auto;
+   height: 400px;
+   width: 800px;
+   position: relative;
+}
  .photo-about {
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 250px;
     width: 250px;
     border-radius: 50%;
- }
- 
- .icon {
-    display: flex;
-    justify-content: space-around;
-    font-size: 2em;
-    width: 60%;
-    margin: 80px auto;
- }
- 
- .fa-images {
-    font-size: 5em;
- }
- 
- .person {
-    display: flex;
-    justify-content: center;
-    margin: 40px auto;
-    width: 70%;
+    background-color: #000;
  }
  .text {
-    width: 70%;
-    margin-left: 60px;
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 60%;
  }
  .text h3 {
     font-size: 1.2em;
@@ -162,6 +164,18 @@
     padding: 10px 0;
     text-align: justify;
  }
+ .icon {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    width: 60%;
+    margin: 80px auto;
+ }
+
+ .fa-images {
+    font-size: 5em;
+ }
+
  
  /* Projects */
  
@@ -186,10 +200,7 @@
     transition: all 0.8s ease;
     background-color: #e5e5e5;
  }
- .examples:hover {
-    color: #fff;
-    background-color: #4c4c4c;
- }
+
  .examples i {
      margin-top: 30px;
  }
@@ -198,15 +209,18 @@
      opacity: 0;
      position: relative;
      top: 80px;
-     font-size: 16px;
+     font-size: 6px;
      text-transform: uppercase;
      transition: all 0.8s ease;
      color: #4c4c4c;
  }
  .examples:hover .description-app{
    opacity: 1;
+   font-size:  20px;
    top: 0;
-   color: #fff;
+ }
+ .examples:hover {
+   font-size:  4.5em;
  }
  .disable {
     color: #fff;
@@ -222,7 +236,7 @@
     background-color: #e5e5e5;
  }
  
- form {
+ .form {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -260,12 +274,14 @@
  /* Media Query*/
  @media (min-width: 1440px){
     .text {
-    width: 60%;
     margin-left: 80px;
  }
     .container {
-       width: 75%;
+       width: 1200px;
     }  
+    .icon {
+       width: 1000px;
+    }
  }
  @media (max-width: 1024px){
     header {
@@ -278,6 +294,9 @@
        align-items: center;
        margin: 0 auto;
     }
+    .text {
+      right: 30px;
+   }
     .container {
        width: 90%;
     }
@@ -287,6 +306,12 @@
     }
   
  }
+ @media (max-width:850px){
+
+     .person {
+      width: 750px;
+   }
+}
  @media (max-width:768px){
     .main-nav .nav-menu {
     justify-content: center;
@@ -297,12 +322,22 @@
       .person {
        flex-direction: column;
        align-items: center;
+       width: 600px;
+       height: 600px;
+    }
+    .photo-about{
+      left: 0;
+      right: 0;
+      margin: auto;
     }
     .text {
-       margin: 20px 0 0 0;
+       top: 300px;
+       left: 0;
+       right: 0;
+       margin: auto;
        width: 90%;
     }
-    form {
+    .form {
        width: 80%;
     }
     .message {
@@ -310,6 +345,14 @@
     }
   
  }
+ @media (max-width:600px){
+
+     .person {
+      width: 500px;
+      height: 615px;
+   }
+ 
+}
  @media (max-width: 520px){
     header {
        height: 50vh;
@@ -346,15 +389,54 @@
        transition: all 0.3s;
        text-align: center;
     }
+    .person {
+      width: 430px;
+      height: 630px;
+   }
     .examples {
        height: 250px;
        width: 250px;
        margin: 10px 0;
     }
+    .examples:hover .description-app{
+      font-size:  16px;
+    }
+    .examples:hover {
+      font-size:  4em;
+    }
       .btn {
        width: 60%;
     }
-    form {
+    .form {
        width: 90%;
     }
  }
+
+ @media (max-width:450px){
+   h1 {
+      font-size: 4em;
+  }
+   .person {
+    width: 350px;
+    height: 680px;
+ }
+
+}
+@media (max-width:370px){
+
+   .person {
+    width: 300px;
+    height: 730px;
+ }
+
+}
+
+@media (max-width:320px){
+
+   .person {
+    width: 270px;
+    height: 760px;
+ }
+
+}
+
