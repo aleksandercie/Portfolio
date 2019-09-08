@@ -306,9 +306,6 @@ footer p {
  
 }
 @media (max-width:850px){
-   header {
-      height: 65vh;
-   }
 
     .person {
      width: 750px;
@@ -442,4 +439,16 @@ footer p {
 }
 
 }
+
+/* Media Query height*/
+@media (max-height:550px){
+
+ header{
+    height: 385px;
+ }
+ h1{
+    font-size: 8em;
+    margin: 20px 0;
+ }
+ }
 
