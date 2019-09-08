@@ -32,7 +32,7 @@ TweenMax.from(banner, 5, {opacity: 0})
 TweenMax.from(nameBox, 3, {opacity: 0, delay: 0.7});
 TweenMax.from(profession, 3, {opacity: 0, delay: 1.2});
 
-var positionAboutElement = -(window.innerWidth);
+var positionAboutElement = -(window.innerWidth + 500);
 
 jQuery.noConflict();
 jQuery(document).ready(function() {
