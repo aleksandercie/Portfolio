@@ -15,7 +15,7 @@ var h = document.documentElement,
   progress = document.getElementById('progress'),
   scroll;
 
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', () => {
   scroll = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
   progress.style.setProperty('--scroll', scroll + '%');
 });
@@ -28,16 +28,20 @@ TweenMax.set(banner, {visibility: "visible"});
 TweenMax.set(nameBox, {visibility: "visible"});
 TweenMax.set(profession, {visibility: "visible"});
 
-TweenMax.from(banner, 5, {opacity: 0})
-TweenMax.from(nameBox, 3, {opacity: 0, delay: 0.7});
-TweenMax.from(profession, 3, {opacity: 0, delay: 1.2});
+TweenMax.from(banner, 5, {ease: Power4.easeOut, opacity: 0})
+TweenMax.from(nameBox, 3, {ease: Power4.easeOut, opacity: 0, delay: 0.7});
+TweenMax.from(profession, 3, {ease: Power4.easeOut, opacity: 0, delay: 1.2});
 
-var positionAboutElement = -(window.innerWidth + 500);
+
+var widthWindow = window.innerWidth;
+var positionAboutElement = -(widthWindow + 500);
+
+
 
 jQuery.noConflict();
-jQuery(document).ready(function() {
+jQuery(document).ready( () => {
     		var controller = new ScrollMagic.Controller();
-    		var blockTween = new TweenMax.from('.photo-about', 3, {
+    		var blockTween = new TweenMax.from('.photo-about', 3, {ease: Power4.easeOut,
     			left: positionAboutElement
     		});
     		var containerScene = new ScrollMagic.Scene({
@@ -53,19 +57,31 @@ jQuery(document).ready(function() {
     		.addTo(controller);
             
     })
+
+    var positionOffSet = -350;
+    var positionDuration = 200;
+
+    const checkWidth = () => {
+      if(widthWindow < 768 ){
+        positionOffSet = 0;
+        positionDuration = 400;
+      }
+    }
+    checkWidth();
+  
     
     jQuery.noConflict();
-    jQuery(document).ready(function() {
+    jQuery(document).ready( () => {
             var controller = new ScrollMagic.Controller();
-            var blockTween = new TweenMax.from('.text', 3, {
+            var blockTween = new TweenMax.from('.text', 3, {ease: Power4.easeOut,
               right: positionAboutElement
             });
             var containerScene = new ScrollMagic.Scene({
               triggerElement: '.person',
     
                     
-                    offset: -350, 
-                    duration: 200 
+                    offset: positionOffSet, 
+                    duration: positionDuration, 
                     
     
             })
@@ -75,9 +91,9 @@ jQuery(document).ready(function() {
         })
 
         jQuery.noConflict();
-        jQuery(document).ready(function() {
+        jQuery(document).ready( () => {
                 var controller = new ScrollMagic.Controller();
-                var blockTween = new TweenMax.from('.examples', 5, {
+                var blockTween = new TweenMax.from('.examples', 5, {ease: Power4.easeOut,
                   backgroundColor: '#4c4c4c',
                   color: '#ffffff'
                   
@@ -97,9 +113,9 @@ jQuery(document).ready(function() {
             })
 
         jQuery.noConflict();
-        jQuery(document).ready(function() {
+        jQuery(document).ready( () => {
                 var controller = new ScrollMagic.Controller();
-                var blockTween = new TweenMax.from('.contact', 5, {
+                var blockTween = new TweenMax.from('.contact', 5, {ease: Power4.easeOut,
                   backgroundColor: '#ffffff'
                   
                 });
@@ -117,9 +133,9 @@ jQuery(document).ready(function() {
                     
             })
             jQuery.noConflict();
-            jQuery(document).ready(function() {
+            jQuery(document).ready( () => {
                     var controller = new ScrollMagic.Controller();
-                    var blockTween = new TweenMax.from('.form', 5, {
+                    var blockTween = new TweenMax.from('.form', 5, {ease: Power4.easeOut,
                       opacity: 0
                       
                     });
