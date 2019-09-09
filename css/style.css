@@ -260,17 +260,33 @@ header {
 
 footer {
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 40px;
-   border-top: 1px solid #dcd9d9;
-   background-color: #e5e5e5;
+   padding: 10px 0;
+   background-color: #dcdcdc;
+}
+.footer-contact{
+   display: flex;
+}
+.footer-contact div{
+   display: flex;
+   align-items: center;
+   margin: 5px 20px;
+}
+.footer-contact i{
+   margin: 0 5px;
 }
 
-footer p {
+.fa-phone{
+   transform: rotate(90deg);
+}
+
+footer p, footer a{
    margin: 0;
    font-size: 0.6em;
 }
+
 
 /* Media Query*/
 @media (min-width: 1440px){
@@ -412,6 +428,7 @@ footer p {
    .form {
       width: 90%;
    }
+
 }
 
 @media (max-width:450px){
@@ -422,7 +439,13 @@ footer p {
    width: 350px;
    height: 680px;
 }
-
+.footer-contact{
+   flex-direction: column;
+   margin-bottom: 5px;
+}
+.footer-contact div{
+   justify-content: center;
+}
 }
 @media (max-width:370px){
 
