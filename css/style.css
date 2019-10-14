@@ -326,16 +326,19 @@ footer p, footer a{
    }
  
 }
+@media(max-width:979px){
+   .description-app{
+      opacity: 1;
+      top: 0;
+      font-size: 14px;
+   }
+}
 @media (max-width:850px){
 
     .person {
      width: 750px;
   }
-  .description-app{
-   opacity: 1;
-   top: 0;
-   font-size: 14px;
-}
+
 }
 @media (max-width:768px){
    .main-nav .nav-menu {
