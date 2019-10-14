@@ -192,10 +192,10 @@ header {
    justify-content: center;
    flex-direction: column;
    align-items: center;
-   height: 300px;
-   width: 300px;
-   margin: 25px 25px;
-   font-size: 3em;
+   height: 220px;
+   width: 220px;
+   margin: 20px 20px;
+   font-size: 2em;
    transition: all 0.8s ease;
    background-color: #e5e5e5;
 }
@@ -203,11 +203,14 @@ header {
 .examples i {
     margin-top: 30px;
 }
+.fa-arrow-right{
+   margin-left: 5px;
+}
 
 .description-app{
     opacity: 0;
     position: relative;
-    top: 80px;
+    top: 60px;
     font-size: 6px;
     text-transform: uppercase;
     transition: all 0.8s ease;
@@ -215,11 +218,11 @@ header {
 }
 .examples:hover .description-app{
   opacity: 1;
-  font-size:  20px;
+  font-size:  14px;
   top: 0;
 }
 .examples:hover {
-  font-size:  4.5em;
+  font-size:  4em;
 }
 .disable {
    pointer-events: none;
@@ -328,6 +331,11 @@ footer p, footer a{
     .person {
      width: 750px;
   }
+  .description-app{
+   opacity: 1;
+   top: 0;
+   font-size: 14px;
+}
 }
 @media (max-width:768px){
    .main-nav .nav-menu {
@@ -364,6 +372,19 @@ footer p, footer a{
       width: 100%;
    }
  
+}
+@media (max-width:700px){
+.container a{
+   padding: 0;
+   margin: 0;
+}
+   .examples {
+      height: 200px;
+      width: 200px;
+      margin: 10px;
+   }
+
+
 }
 @media (max-width:600px){
 
