@@ -83,6 +83,7 @@ hr {
 }
 .page-content-in {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 /* Preloader */
 
