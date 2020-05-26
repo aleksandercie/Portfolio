@@ -80,10 +80,10 @@ hr {
   position: relative;
   height: 100vh;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 .page-content-in {
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 /* Preloader */
 
