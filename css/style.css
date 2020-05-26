@@ -22,7 +22,7 @@ h1 {
   margin: 60px 0;
   font-weight: 700;
   visibility: hidden;
-  background: url(../img/image2.jpg) -200px;
+  background: url(../img/image.jpg) -200px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -128,7 +128,7 @@ hr {
 .main-content {
   padding: 0;
   border: 6px solid;
-  border-image: url(../img/image2.jpg) 30 round;
+  border-image: url(../img/image.jpg) 30 round;
   position: absolute;
   top: 0;
   z-index: 0;
