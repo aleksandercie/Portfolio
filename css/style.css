@@ -8,6 +8,8 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   color: #4c4c4c;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 section {
@@ -74,17 +76,6 @@ hr {
   background-color: #4c4c4c;
 }
 
-/* Page */
-
-.page-content {
-  position: relative;
-  height: 100vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-.page-content-in {
-  overflow-y: scroll;
-}
 /* Preloader */
 
 .preloader {
@@ -95,7 +86,7 @@ hr {
   align-items: center;
   background-color: #fff;
   color: #4c4c4c;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
 }
@@ -130,16 +121,14 @@ hr {
   padding: 0;
   border: 6px solid;
   border-image: url(../img/image.jpg) 30 round;
-  position: absolute;
-  top: 0;
-  z-index: 0;
   opacity: 0.3;
   pointer-events: none;
+  position: relative;
   transition: all 0.8s ease-in;
 }
 .main-content-in {
   opacity: 1;
-  z-index: 1;
+  z-index: 2;
   pointer-events: auto;
 }
 
