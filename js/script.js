@@ -1,8 +1,12 @@
+// Close loading page
+
 setTimeout(function () {
-  document.querySelector(".page-content").classList.add("page-content-in");
   document.querySelector(".main-content").classList.add("main-content-in");
   document.querySelector(".preloader").classList.add("preloader-out");
+  document.querySelector("body").style.overflowY = "scroll";
 }, 2700);
+
+// Smooth scroll
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -13,6 +17,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+// Section header animation visibility
 
 var banner = document.getElementById("banner");
 var nameBox = document.getElementById("name");
@@ -25,6 +31,8 @@ TweenMax.set(profession, { visibility: "visible" });
 TweenMax.from(banner, 5, { ease: Power4.easeOut, opacity: 0, delay: 3.4 });
 TweenMax.from(nameBox, 3, { ease: Power4.easeOut, opacity: 0, delay: 4.0 });
 TweenMax.from(profession, 3, { ease: Power4.easeOut, opacity: 0, delay: 4.3 });
+
+// Section about animation
 
 var widthWindow = window.innerWidth;
 var positionAboutElement = -(widthWindow + 500);
@@ -74,6 +82,8 @@ jQuery(document).ready(() => {
     .addTo(controller);
 });
 
+// Section projects animation
+
 jQuery.noConflict();
 jQuery(document).ready(() => {
   var controller = new ScrollMagic.Controller();
@@ -91,6 +101,8 @@ jQuery(document).ready(() => {
     .setTween(blockTween)
     .addTo(controller);
 });
+
+// Section contact animation
 
 jQuery.noConflict();
 jQuery(document).ready(() => {
