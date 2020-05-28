@@ -515,3 +515,14 @@ footer a {
     height: 870px;
   }
 }
+
+/* Media Query height*/
+@media (max-height: 550px) {
+  header {
+    height: 385px;
+  }
+  h1 {
+    font-size: 8em;
+    margin: 20px 0;
+  }
+}
