@@ -125,6 +125,7 @@ hr {
   pointer-events: none;
   position: relative;
   transition: all 0.8s ease-in;
+  overflow-x: hidden;
 }
 .main-content-in {
   opacity: 1;
