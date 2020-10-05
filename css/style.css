@@ -75,7 +75,8 @@ hr {
   border: none;
   background-color: #4c4c4c;
 }
-
+.wrapper{
+  overflow-x: hidden;
 /* Preloader */
 
 .preloader {
@@ -125,7 +126,6 @@ hr {
   pointer-events: none;
   position: relative;
   transition: all 0.8s ease-in;
-  overflow-x: hidden;
 }
 .main-content-in {
   opacity: 1;
